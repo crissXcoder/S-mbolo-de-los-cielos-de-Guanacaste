@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "title": "Symbol of the Guanacaste Skies",
+    "description": "Explore the ecology, threats, and recovery process of the Scarlet Macaw in the dry forest of Costa Rica."
+  },
+  "hero": {
+    "title": "Symbol of the Guanacaste Skies",
+    "subtitle": "The health of the dry forest rests on the wings of the Scarlet Macaw. Discover its story, its threats, and its rebirth.",
+    "cta": "Explore the Documentary",
+    "scroll": "Scroll to discover"
+  },
+  "ecology": {
+    "title": "The Heartbeat of the Dry Forest",
+    "description": "The Scarlet Macaw (Ara macao) is not just a bird; it is an architect of its environment. Its presence indicates a healthy ecosystem."
+  },
+  "threats": {
+    "title": "On the Edge of Silence",
+    "description": "Decades of deforestation and nest poaching brought the species close to extinction in Guanacaste."
+  },
+  "conservation": {
+    "title": "A Flight Towards the Future",
+    "description": "Thanks to protected areas and community efforts, red paints our skies once again.",
+    "ethics": "Observe with respect. Wildlife is not a pet."
+  }
+}

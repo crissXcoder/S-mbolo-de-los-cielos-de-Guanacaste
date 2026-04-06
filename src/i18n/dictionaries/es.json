@@ -1,0 +1,25 @@
+{
+  "metadata": {
+    "title": "Símbolo de los Cielos de Guanacaste",
+    "description": "Explora la ecología, amenazas y el proceso de recuperación de la Lapa Roja en el bosque seco de Costa Rica."
+  },
+  "hero": {
+    "title": "Símbolo de los Cielos de Guanacaste",
+    "subtitle": "La salud del bosque seco descansa en las alas de la Lapa Roja. Descubre su historia, sus amenazas y su renacer.",
+    "cta": "Explora el Documental",
+    "scroll": "Desliza para descubrir"
+  },
+  "ecology": {
+    "title": "El Latido del Bosque Seco",
+    "description": "La Lapa Roja (Ara macao) no solo es un ave; es un arquitecto de su entorno. Su presencia indica un ecosistema saludable."
+  },
+  "threats": {
+    "title": "Al Borde del Silencio",
+    "description": "Décadas de deforestación y saqueo de nidos llevaron a la especie casi a la extinción en Guanacaste."
+  },
+  "conservation": {
+    "title": "Un Vuelo Hacia el Futuro",
+    "description": "Gracias a las áreas protegidas y al esfuerzo de comunidades, el rojo vuelve a pintar nuestros cielos.",
+    "ethics": "Observa con respeto. La fauna silvestre no es mascota."
+  }
+}
