@@ -1,25 +1,63 @@
 {
   "metadata": {
-    "title": "Símbolo de los Cielos de Guanacaste",
-    "description": "Explora la ecología, amenazas y el proceso de recuperación de la Lapa Roja en el bosque seco de Costa Rica."
+    "title": "Símbolo de los Cielos de Guanacaste | Ara macao",
+    "description": "La salud del bosque seco descansa en las alas de la Lapa Roja. Descubre su ecología, amenazas y esfuerzos de recuperación."
   },
   "hero": {
+    "badge": "Especie Clave de Costa Rica",
     "title": "Símbolo de los Cielos de Guanacaste",
-    "subtitle": "La salud del bosque seco descansa en las alas de la Lapa Roja. Descubre su historia, sus amenazas y su renacer.",
-    "cta": "Explora el Documental",
-    "scroll": "Desliza para descubrir"
+    "subtitle": "La salud del bosque seco tropical descansa en sus alas. Descubre la historia, las amenazas y el renacer de la Lapa Roja.",
+    "scroll": "Iniciar el Vuelo"
+  },
+  "introduction": {
+    "title": "Mucho más que colores brillantes",
+    "body": "El Ara macao es una criatura de extrema inteligencia y fuerte estructura social. Viven más de 50 años y forman lazos de pareja para toda la vida, lo que significa que la pérdida de un solo individuo afecta a generaciones enteras y a la dinámica natural de su parvada."
   },
   "ecology": {
-    "title": "El Latido del Bosque Seco",
-    "description": "La Lapa Roja (Ara macao) no solo es un ave; es un arquitecto de su entorno. Su presencia indica un ecosistema saludable."
+    "title": "Los Arquitectos del Bosque",
+    "body": "No interactúan pasivamente con su entorno; ellas son sembradoras forestales. Al alimentarse de frutos pesados como el almendro de montaña, el guanacaste y la ceiba, esparcen sus semillas por inmensas distancias. Proteger a la lapa es proteger los pulmones del trópico seco."
   },
   "threats": {
-    "title": "Al Borde del Silencio",
-    "description": "Décadas de deforestación y saqueo de nidos llevaron a la especie casi a la extinción en Guanacaste."
+    "title": "Al borde del silencio",
+    "body": "A finales del siglo XX, Guanacaste casi pierde a su ave insigne. La deforestación desmedida arrasó sus sitios de anidación naturales. Al mismo tiempo, el despiadado mercado negro saqueó sus nidos masivamente, secuestrando a los pichones para forzarlos al cautiverio nacional e internacional."
   },
-  "conservation": {
-    "title": "Un Vuelo Hacia el Futuro",
-    "description": "Gracias a las áreas protegidas y al esfuerzo de comunidades, el rojo vuelve a pintar nuestros cielos.",
-    "ethics": "Observa con respeto. La fauna silvestre no es mascota."
+  "recovery": {
+    "title": "El Renacer Rojo",
+    "body": "Hoy, gracias a la estricta protección de las leyes forestales y el heroico esfuerzo de guardaparques, ONGs y brigadas comunitarias, la población ha comenzado a recuperarse. Lentamente, los cielos de Guanacaste vuelven a teñirse con esperanza."
+  },
+  "locations": {
+    "title": "¿Dónde vuelan protegidas?",
+    "subtitle": "Áreas silvestres donde la Lapa Roja encuentra santuario en el noroeste de Costa Rica.",
+    "places": [
+      {
+        "name": "P.N. Santa Rosa",
+        "desc": "El bosque seco más grande y antiguo de Mesoamérica."
+      },
+      {
+        "name": "P.N. Palo Verde",
+        "desc": "Humedales vitales rodeados de bosque tropical."
+      },
+      {
+        "name": "Corredores Biológicos",
+        "desc": "Rutas privadas y estatales que interconectan ecosistemas."
+      }
+    ]
+  },
+  "ethics": {
+    "title": "Sé un visitante silencioso",
+    "rule1": "Nunca alteres su dieta.",
+    "rule1Desc": "No intentes alimentarlas. Su rol es comer los frutos del bosque para esparcir semillas.",
+    "rule2": "El cielo es su hogar.",
+    "rule2Desc": "Nacieron para volar decenas de kilómetros. Nunca apoyes el cautiverio ilegal ni compres fauna silvestre.",
+    "rule3": "Fotografía sin invadir.",
+    "rule3Desc": "Evita reproducir audios grabados de lapas para atraerlas (playback); esto altera severamente su comportamiento natural y las estresa."
+  },
+  "cta": {
+    "title": "El bosque sigue necesitando defensores",
+    "body": "Suma tu voz. Aprende más, denuncia el tráfico silvestre llamando a las autoridades y apoya a los santuarios nacionales que resguardan nuestra riqueza tropical.",
+    "button": "Apoyar la Conservación"
+  },
+  "footer": {
+    "rights": "Símbolo de los Cielos de Guanacaste. Elaborado bajo fines de divulgación científica y ambiental pura. No comercial."
   }
 }
