@@ -1,25 +1,63 @@
 {
   "metadata": {
-    "title": "Symbol of the Guanacaste Skies",
-    "description": "Explore the ecology, threats, and recovery process of the Scarlet Macaw in the dry forest of Costa Rica."
+    "title": "Symbol of the Guanacaste Skies | Scarlet Macaw",
+    "description": "The health of the dry forest rests on the wings of the Scarlet Macaw. Discover its ecology, threats, and recovery efforts."
   },
   "hero": {
+    "badge": "Keystone Species of Costa Rica",
     "title": "Symbol of the Guanacaste Skies",
-    "subtitle": "The health of the dry forest rests on the wings of the Scarlet Macaw. Discover its story, its threats, and its rebirth.",
-    "cta": "Explore the Documentary",
-    "scroll": "Scroll to discover"
+    "subtitle": "The health of the tropical dry forest rests on its wings. Discover the history, the threats, and the rebirth of the Scarlet Macaw.",
+    "scroll": "Begin the Flight"
+  },
+  "introduction": {
+    "title": "Much more than bright colors",
+    "body": "The Ara macao is a creature of extreme intelligence and strong social structure. They live for over 50 years and mate for life, meaning the loss of a single individual affects entire generations and the natural dynamics of their flock."
   },
   "ecology": {
-    "title": "The Heartbeat of the Dry Forest",
-    "description": "The Scarlet Macaw (Ara macao) is not just a bird; it is an architect of its environment. Its presence indicates a healthy ecosystem."
+    "title": "The Architects of the Forest",
+    "body": "They don't interact passively with their environment; they are forest sowers. By feeding on heavy fruits like the mountain almond, guanacaste, and ceiba, they spread their seeds over immense distances. Protecting the macaw means protecting the lungs of the dry tropics."
   },
   "threats": {
-    "title": "On the Edge of Silence",
-    "description": "Decades of deforestation and nest poaching brought the species close to extinction in Guanacaste."
+    "title": "On the edge of silence",
+    "body": "At the end of the 20th century, Guanacaste almost lost its flagship bird. Widespread deforestation destroyed their natural nesting sites. Simultaneously, a ruthless black market massively poached their nests, kidnapping chicks to force them into national and international captivity."
   },
-  "conservation": {
-    "title": "A Flight Towards the Future",
-    "description": "Thanks to protected areas and community efforts, red paints our skies once again.",
-    "ethics": "Observe with respect. Wildlife is not a pet."
+  "recovery": {
+    "title": "The Red Rebirth",
+    "body": "Today, thanks to the strict protection of forestry laws and the heroic efforts of park rangers, NGOs, and community brigades, the population has begun to recover. Slowly, the skies of Guanacaste are once again colored with hope."
+  },
+  "locations": {
+    "title": "Where do they fly protected?",
+    "subtitle": "Wilderness areas where the Scarlet Macaw finds sanctuary in northwestern Costa Rica.",
+    "places": [
+      {
+        "name": "Santa Rosa N.P.",
+        "desc": "The largest and oldest dry forest in Mesoamerica."
+      },
+      {
+        "name": "Palo Verde N.P.",
+        "desc": "Vital wetlands surrounded by tropical dry forest."
+      },
+      {
+        "name": "Biological Corridors",
+        "desc": "Private and state routes interconnecting ecosystems."
+      }
+    ]
+  },
+  "ethics": {
+    "title": "Be a silent visitor",
+    "rule1": "Never alter their diet.",
+    "rule1Desc": "Do not attempt to feed them. Their role is to eat forest fruits to spread seeds.",
+    "rule2": "The sky is their home.",
+    "rule2Desc": "They were born to fly dozens of kilometers. Never support illegal captivity or buy wildlife.",
+    "rule3": "Photograph without invading.",
+    "rule3Desc": "Avoid playing recorded macaw sounds to attract them (playback); this severely alters their natural behavior and causes stress."
+  },
+  "cta": {
+    "title": "The forest still needs defenders",
+    "body": "Add your voice. Learn more, report wildlife trafficking to the authorities, and support the national sanctuaries that protect our tropical wealth.",
+    "button": "Support Conservation"
+  },
+  "footer": {
+    "rights": "Symbol of the Guanacaste Skies. Created purely for scientific and environmental outreach. Non-commercial."
   }
 }
