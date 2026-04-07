@@ -34,6 +34,21 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
 
+  /* Paleta Temática Lapa Roja (Disponibles globalmente como bg-lapa-red, text-forest-green, etc..) */
+  --color-lapa-red: var(--lapa-red);
+  --color-lapa-red-deep: var(--lapa-red-deep);
+  --color-lapa-yellow: var(--lapa-yellow);
+  --color-lapa-blue: var(--lapa-blue);
+  --color-lapa-blue-deep: var(--lapa-blue-deep);
+  --color-forest-green: var(--forest-green);
+  --color-forest-dark: var(--forest-dark);
+  --color-earth-sand: var(--earth-sand);
+  --color-earth-dry: var(--earth-dry);
+  --color-bark-brown: var(--bark-brown);
+  --color-ivory-light: var(--ivory-light);
+  --color-cream-natural: var(--cream-natural);
+  --color-charcoal: var(--charcoal);
+
   --color-chart-1: var(--chart-1);
   --color-chart-2: var(--chart-2);
   --color-chart-3: var(--chart-3);
@@ -49,10 +64,6 @@
   --font-serif: var(--font-playfair);
 }
 
-/*
-  The default border color has changed to `currentColor` in Tailwind CSS v4,
-  so we've added these base styles back for backcompat.
-*/
 @layer base {
   *,
   ::after,
@@ -65,78 +76,93 @@
 
 @layer base {
   :root {
-    /* Theme Claro (Bosque Seco) */
-    --background: 42 45% 97%;   /* Marfil Suave / Arena cálida */
-    --foreground: 220 15% 15%;  /* Carbón para texto */
+    /* Theme Claro (Marfil y Bosque Seco) */
+    --background: #F7F2EA; /* Marfil Claro */
+    --foreground: #1E1E1E; /* Carbón */
     
-    --card: 40 40% 98%;         /* Blanco con calidez */
-    --card-foreground: 220 15% 15%;
+    --card: #EFE6D8; /* Crema Natural */
+    --card-foreground: #1E1E1E;
     
-    --popover: 40 40% 98%;
-    --popover-foreground: 220 15% 15%;
+    --popover: #F7F2EA;
+    --popover-foreground: #1E1E1E;
     
-    --primary: 352 82% 50%;     /* Rojo Lapa Intenso */
-    --primary-foreground: 0 0% 100%;
+    --primary: #C63D2F; /* Rojo lapa */
+    --primary-foreground: #FFFFFF;
     
-    --secondary: 44 95% 55%;    /* Amarillo Ala */
-    --secondary-foreground: 220 15% 15%; 
+    --secondary: #E7B648; /* Amarillo ala */
+    --secondary-foreground: #1E1E1E;
     
-    --muted: 42 20% 92%;        /* Corteza clara */
-    --muted-foreground: 220 10% 45%;
+    --muted: #D8C1A0; /* Arena cálida */
+    --muted-foreground: #6B4A32; /* Marrón corteza */
     
-    --accent: 210 90% 45%;      /* Azul Plumaje */
-    --accent-foreground: 0 0% 100%;
+    --accent: #2D6FA3; /* Azul plumaje */
+    --accent-foreground: #FFFFFF;
     
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: #9E2A1F; /* Rojo profundo */
+    --destructive-foreground: #FFFFFF;
     
-    --border: 42 20% 85%;
-    --input: 42 20% 85%;
-    --ring: 352 82% 50%;
+    --border: #D8C1A0;
+    --input: #D8C1A0;
+    --ring: #C63D2F;
     --radius: 0.75rem;
 
-    --chart-1: 12 76% 61%;
-    --chart-2: 173 58% 39%;
-    --chart-3: 197 37% 24%;
-    --chart-4: 43 74% 66%;
-    --chart-5: 27 87% 67%;
+    /* Base Temática Fija (Siempre constante para acentos y decoraciones) */
+    --lapa-red: #C63D2F;
+    --lapa-red-deep: #9E2A1F;
+    --lapa-yellow: #E7B648;
+    --lapa-blue: #2D6FA3;
+    --lapa-blue-deep: #1F4F78;
+    --forest-green: #4E6B3C;
+    --forest-dark: #2F4A34;
+    --earth-sand: #D8C1A0;
+    --earth-dry: #B08968;
+    --bark-brown: #6B4A32;
+    --ivory-light: #F7F2EA;
+    --cream-natural: #EFE6D8;
+    --charcoal: #1E1E1E;
+
+    --chart-1: #C63D2F;
+    --chart-2: #2D6FA3;
+    --chart-3: #E7B648;
+    --chart-4: #4E6B3C;
+    --chart-5: #B08968;
   }
 
   .dark {
-    /* Theme Oscuro (Dosel Nocturno) */
-    --background: 145 35% 8%;   /* Verde Bosque Seco Profundo */
-    --foreground: 45 40% 95%;   /* Arena/Marfil claro */
+    /* Theme Oscuro (Dosel Nocturno y Sombras del Bosque) */
+    --background: #111C15; /* Verde Bosque Nocturno Muy Oscuro (Evita negro total) */
+    --foreground: #EFE6D8; /* Crema para alto contraste sin deslumbrar */
     
-    --card: 145 30% 12%;        /* Verde ligero para cards */
-    --card-foreground: 45 40% 95%;
+    --card: #182B20; /* Verde ligero para profundidad de tarjetas */
+    --card-foreground: #F7F2EA;
     
-    --popover: 145 30% 12%;
-    --popover-foreground: 45 40% 95%;
+    --popover: #182B20;
+    --popover-foreground: #F7F2EA;
     
-    --primary: 352 85% 60%;     /* Rojo Lapa Brillante */
-    --primary-foreground: 0 0% 100%;
+    --primary: #C63D2F; /* El Rojo Lapa brilla igual en la oscuridad */
+    --primary-foreground: #FFFFFF;
     
-    --secondary: 44 90% 60%;    /* Amarillo Ala vibrante */
-    --secondary-foreground: 145 35% 8%;
+    --secondary: #E7B648; /* Amarillo Ala como acento vibrante */
+    --secondary-foreground: #111C15; 
     
-    --muted: 145 20% 20%;
-    --muted-foreground: 45 20% 75%;
+    --muted: #1F3326; /* Verde oscuro sutil */
+    --muted-foreground: #A1AFA6; /* Gris verdoso para texto secundario */
     
-    --accent: 210 80% 55%;      /* Azul Plumaje luminoso */
-    --accent-foreground: 0 0% 100%;
+    --accent: #2D6FA3; /* Azul plumaje iluminado */
+    --accent-foreground: #FFFFFF;
     
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive: #9E2A1F;
+    --destructive-foreground: #FFFFFF;
     
-    --border: 145 20% 20%;
-    --input: 145 20% 20%;
-    --ring: 352 85% 60%;
+    --border: #1F3326;
+    --input: #1F3326;
+    --ring: #C63D2F;
     
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --chart-1: #C63D2F;
+    --chart-2: #2D6FA3;
+    --chart-3: #E7B648;
+    --chart-4: #4E6B3C;
+    --chart-5: #B08968;
   }
 }
 
@@ -145,7 +171,7 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground font-sans antialiased;
+    @apply bg-background text-foreground font-sans antialiased selection:bg-primary/20 selection:text-primary;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-serif;
