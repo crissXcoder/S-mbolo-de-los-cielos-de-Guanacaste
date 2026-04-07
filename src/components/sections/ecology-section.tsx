@@ -63,7 +63,7 @@ export function EcologySection({ dict }: { dict: Dictionary["ecology"] }) {
                 className="absolute inset-[-10%]"
                 style={{ 
                   y: yParallaxObj,
-                  backgroundImage: "url('https://images.unsplash.com/photo-1616428766100-3432d007ec14?auto=format&fit=crop&q=80')",
+                  backgroundImage: "url('https://i.ibb.co/81n8w1K/image.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center"
                 }}
