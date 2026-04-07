@@ -8,7 +8,7 @@ type Props = {
   params: { lang: "es" | "en" }
 }
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: "es" | "en" }> }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
   const { lang } = await params
   const isEs = lang === "es"
   const baseUrl = getSiteUrl()
@@ -100,15 +100,16 @@ export default async function LangLayout({
   params,
 }: {
   children: React.ReactNode
-  params: Promise<{ lang: "es" | "en" }>
+  params: Promise<{ lang: string }>
 }) {
   const { lang } = await params
+  const typedLang = lang as "es" | "en"
   return (
-    <html lang={lang} suppressHydrationWarning>
+    <html lang={typedLang} suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#b91c1c" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#7f1d1d" media="(prefers-color-scheme: dark)" />
-        <JsonLd lang={lang} />
+        <JsonLd lang={typedLang} />
       </head>
       <body className="antialiased min-h-screen bg-background text-foreground flex flex-col">
         {/* Header and Footer are rendered inside page.tsx in the current architecture or globally here. 
