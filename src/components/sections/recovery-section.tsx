@@ -38,7 +38,7 @@ export function RecoverySection({ dict }: { dict: Dictionary["recovery"] }) {
                 className="absolute inset-[-10%]"
                 style={{ 
                   y: yParallaxObj,
-                  backgroundImage: "url('https://images.unsplash.com/photo-1550853024-fae8cd4be47f?auto=format&fit=crop&q=80')",
+                  backgroundImage: "url('https://i.ibb.co/TxMTkTTJ/image.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center"
                 }}
