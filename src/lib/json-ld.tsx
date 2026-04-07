@@ -36,7 +36,7 @@ export function JsonLd({ lang }: JsonLdProps) {
         "url": siteUrl,
         "logo": {
           "@type": "ImageObject",
-          "url": `${siteUrl}/icon.png`
+          "url": "https://i.ibb.co/9MfHMZL/image.png"
         },
         "sameAs": []
       },
