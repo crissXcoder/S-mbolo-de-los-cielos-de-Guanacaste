@@ -51,7 +51,7 @@ export function IntroductionSection({ dict }: { dict: Dictionary["introduction"]
              className="hidden lg:flex lg:col-span-4 flex-col gap-6"
           >
             <div className="aspect-[4/5] rounded-3xl overflow-hidden relative shadow-lg">
-               <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1627503798952-401490214c77?auto=format&fit=crop&w=800&q=80')" }}></div>
+               <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('https://i.ibb.co/KzFB0hkC/image.png')" }}></div>
                <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent"></div>
                <p className="absolute bottom-6 left-6 text-white font-serif italic text-lg pr-6 drop-shadow-md">
                  "Un destello escarlata entre el dosel seco."
