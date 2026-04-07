@@ -8,36 +8,44 @@ import type { Dictionary } from "@/i18n/get-dictionary"
 
 export function ThreatsSection({ dict }: { dict: Dictionary["threats"] }) {
   return (
-    <section className="py-32 md:py-48 bg-card relative overflow-hidden border-y border-border/40">
+    <section className="py-32 md:py-48 bg-destructive/5 dark:bg-destructive/10 relative overflow-hidden">
       
-      {/* Subtle texture abstract background with breathing animation */}
+      {/* Texture abstract background with breathing animation */}
       <motion.div 
         className="absolute inset-0 pointer-events-none" 
-        style={{ background: "radial-gradient(circle at 50% 50%, var(--color-destructive) 0%, transparent 60%)" }}
-        animate={{ opacity: [0.05, 0.15, 0.05] }}
-        transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+        style={{ background: "radial-gradient(circle at 50% 100%, var(--color-destructive) 0%, transparent 70%)" }}
+        animate={{ opacity: [0.03, 0.1, 0.03] }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       />
+      
+      {/* Decorative vertical lines */}
+      <div className="absolute top-0 left-1/4 w-px h-full bg-linear-to-b from-transparent via-destructive/20 to-transparent separator-line" />
+      <div className="absolute top-0 right-1/4 w-px h-full bg-linear-to-b from-transparent via-destructive/20 to-transparent separator-line" />
 
-      <div className="container mx-auto px-4 md:px-8 max-w-4xl relative z-10 text-center">
+      <div className="container mx-auto px-6 md:px-12 max-w-5xl relative z-10 text-center">
         <motion.div
-           initial={{ opacity: 0, scale: 0.95 }}
-           whileInView={{ opacity: 1, scale: 1 }}
+           initial={{ opacity: 0, y: 50 }}
+           whileInView={{ opacity: 1, y: 0 }}
            viewport={{ once: true, margin: "-100px" }}
            transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
+           className="bg-card/50 backdrop-blur-3xl border border-destructive/20 p-12 md:p-20 rounded-[3rem] shadow-2xl shadow-destructive/5 relative overflow-hidden"
         >
-          <div className="inline-flex flex-col items-center gap-6 mb-10">
+          {/* Subtle noise or pattern could go here */}
+          <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-5 mix-blend-overlay"></div>
+          
+          <div className="inline-flex flex-col items-center gap-6 mb-12 relative z-10">
             <motion.div 
-              whileHover={{ scale: 1.1, rotate: 5 }}
-              className="p-5 rounded-full bg-destructive/10 text-destructive cursor-default"
+              whileHover={{ scale: 1.1, rotate: 10 }}
+              className="p-5 rounded-3xl bg-destructive/10 border border-destructive/30 text-destructive shadow-inner"
             >
-              <AlertCircle className="w-10 h-10" />
+              <AlertCircle className="w-10 h-10 md:w-14 md:h-14" />
             </motion.div>
-            <h2 className="text-5xl md:text-6xl lg:text-7xl font-serif text-foreground leading-[1.1]">
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-serif font-bold text-foreground leading-[1.1]">
               {dict.title}
             </h2>
           </div>
           
-          <p className="text-xl md:text-3xl text-foreground/80 font-sans leading-relaxed max-w-3xl mx-auto">
+          <p className="text-xl md:text-3xl text-foreground/80 font-sans leading-relaxed max-w-3xl mx-auto font-light relative z-10">
             {dict.body}
           </p>
         </motion.div>

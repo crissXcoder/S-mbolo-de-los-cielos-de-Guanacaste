@@ -65,34 +65,34 @@
 
 @layer base {
   :root {
-    /* Theme Claro (Dry Forest Day) */
-    --background: 40 33% 98%;   /* Guanacaste Sand */
-    --foreground: 215 15% 15%;  /* Bark Slate */
+    /* Theme Claro (Bosque Seco) */
+    --background: 42 45% 97%;   /* Marfil Suave / Arena cálida */
+    --foreground: 220 15% 15%;  /* Carbón para texto */
     
-    --card: 0 0% 100%;          /* White */
-    --card-foreground: 215 15% 15%;
+    --card: 40 40% 98%;         /* Blanco con calidez */
+    --card-foreground: 220 15% 15%;
     
-    --popover: 0 0% 100%;
-    --popover-foreground: 215 15% 15%;
+    --popover: 40 40% 98%;
+    --popover-foreground: 220 15% 15%;
     
-    --primary: 354 75% 53%;     /* Scarlet Macaw */
+    --primary: 352 82% 50%;     /* Rojo Lapa Intenso */
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 100 10% 90%;   /* Light foliage */
-    --secondary-foreground: 143 55% 15%; /* Deep green */
+    --secondary: 44 95% 55%;    /* Amarillo Ala */
+    --secondary-foreground: 220 15% 15%; 
     
-    --muted: 40 20% 94%;
-    --muted-foreground: 100 10% 45%; /* Dry foliage */
+    --muted: 42 20% 92%;        /* Corteza clara */
+    --muted-foreground: 220 10% 45%;
     
-    --accent: 40 20% 90%;
-    --accent-foreground: 215 15% 15%;
+    --accent: 210 90% 45%;      /* Azul Plumaje */
+    --accent-foreground: 0 0% 100%;
     
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 40 15% 85%;
-    --input: 40 15% 85%;
-    --ring: 354 75% 53%;
+    --border: 42 20% 85%;
+    --input: 42 20% 85%;
+    --ring: 352 82% 50%;
     --radius: 0.75rem;
 
     --chart-1: 12 76% 61%;
@@ -103,34 +103,34 @@
   }
 
   .dark {
-    /* Theme Oscuro (Midnight Canopy) */
-    --background: 143 80% 4%;   /* Midnight Canopy */
-    --foreground: 40 33% 96%;   /* Starlight Sand */
+    /* Theme Oscuro (Dosel Nocturno) */
+    --background: 145 35% 8%;   /* Verde Bosque Seco Profundo */
+    --foreground: 45 40% 95%;   /* Arena/Marfil claro */
     
-    --card: 143 70% 8%;         /* Canopy Shadow */
-    --card-foreground: 40 33% 96%;
+    --card: 145 30% 12%;        /* Verde ligero para cards */
+    --card-foreground: 45 40% 95%;
     
-    --popover: 143 70% 8%;
-    --popover-foreground: 40 33% 96%;
+    --popover: 145 30% 12%;
+    --popover-foreground: 45 40% 95%;
     
-    --primary: 354 85% 60%;     /* Scarlet Macaw Bright */
+    --primary: 352 85% 60%;     /* Rojo Lapa Brillante */
     --primary-foreground: 0 0% 100%;
     
-    --secondary: 143 30% 15%;
-    --secondary-foreground: 40 33% 96%;
+    --secondary: 44 90% 60%;    /* Amarillo Ala vibrante */
+    --secondary-foreground: 145 35% 8%;
     
-    --muted: 143 30% 12%;
-    --muted-foreground: 40 20% 70%;
+    --muted: 145 20% 20%;
+    --muted-foreground: 45 20% 75%;
     
-    --accent: 143 40% 15%;
-    --accent-foreground: 40 33% 96%;
+    --accent: 210 80% 55%;      /* Azul Plumaje luminoso */
+    --accent-foreground: 0 0% 100%;
     
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     
-    --border: 143 30% 15%;
-    --input: 143 30% 15%;
-    --ring: 354 85% 60%;
+    --border: 145 20% 20%;
+    --input: 145 20% 20%;
+    --ring: 352 85% 60%;
     
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;

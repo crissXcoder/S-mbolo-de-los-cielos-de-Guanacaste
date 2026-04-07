@@ -1,7 +1,13 @@
+import { Inter, Playfair_Display } from "next/font/google"
 import { Metadata } from "next"
 import { getSiteUrl } from "@/lib/env"
 import { Header } from "@/components/layout/header"
+import { ThemeProvider } from "@/components/theme-provider"
 import { JsonLd } from "@/lib/json-ld"
+import "../globals.css"
+
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" })
+const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair", display: "swap" })
 
 type Props = {
   children: React.ReactNode
@@ -105,18 +111,20 @@ export default async function LangLayout({
   const { lang } = await params
   const typedLang = lang as "es" | "en"
   return (
-    <html lang={typedLang} suppressHydrationWarning>
+    <html lang={typedLang} className={`${inter.variable} ${playfair.variable}`} suppressHydrationWarning>
       <head>
         <meta name="theme-color" content="#b91c1c" media="(prefers-color-scheme: light)" />
         <meta name="theme-color" content="#7f1d1d" media="(prefers-color-scheme: dark)" />
         <JsonLd lang={typedLang} />
       </head>
-      <body className="antialiased min-h-screen bg-background text-foreground flex flex-col">
-        {/* Header and Footer are rendered inside page.tsx in the current architecture or globally here. 
-            NOTE: Header was in both layout and page. I'm leaving it here as the global shell. */}
-        <Header />
-        <main className="flex-1 flex flex-col">{children}</main>
-        {/* Footer could be here, but leaving it as in the original to not break the design. */}
+      <body className="antialiased min-h-screen bg-background text-foreground font-sans flex flex-col">
+        <ThemeProvider>
+          {/* Header and Footer are rendered inside page.tsx in the current architecture or globally here. 
+              NOTE: Header was in both layout and page. I'm leaving it here as the global shell. */}
+          <Header />
+          <main className="flex-1 flex flex-col">{children}</main>
+          {/* Footer could be here, but leaving it as in the original to not break the design. */}
+        </ThemeProvider>
       </body>
     </html>
   )
