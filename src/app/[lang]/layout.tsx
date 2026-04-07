@@ -1,68 +1,85 @@
-import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
-import { getDictionary, type Locale } from "@/i18n/get-dictionary";
-import { ThemeProvider } from "@/components/theme-provider";
-import "../../app/globals.css";
+import { Metadata } from "next"
+import { getSiteUrl } from "@/lib/env"
+import { Header } from "@/components/layout/header"
+import { JsonLd } from "@/lib/json-ld"
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+type Props = {
+  children: React.ReactNode
+  params: { lang: "es" | "en" }
+}
 
-const playfair = Playfair_Display({
-  variable: "--font-playfair",
-  subsets: ["latin"],
-});
+export async function generateMetadata({ params }: { params: Promise<{ lang: "es" | "en" }> }): Promise<Metadata> {
+  const { lang } = await params
+  const isEs = lang === "es"
+  const baseUrl = getSiteUrl()
 
-export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
-  const { lang } = await params;
-  const dictionary = await getDictionary(lang as Locale);
-  
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://simbolo-cielos-guanacaste.vercel.app";
+  const title = isEs ? "Símbolo de los Cielos de Guanacaste | Ara macao" : "Symbol of the Guanacaste Skies | Ara macao"
+  const description = isEs 
+    ? "La salud del bosque seco descansa en las alas de la Lapa Roja. Descubre su ecología, amenazas y esfuerzos de conservación en Guanacaste, Costa Rica."
+    : "The health of the dry forest rests on the wings of the Scarlet Macaw. Discover its ecology, threats, and conservation efforts in Guanacaste, Costa Rica."
+
+  const keywords = isEs
+    ? ["lapa roja", "Ara macao", "lapa roja Costa Rica", "lapa roja Guanacaste", "conservación lapa roja", "bosque seco Guanacaste", "avistamiento aves Guanacaste", "fauna silvestre Costa Rica"]
+    : ["Scarlet Macaw", "Ara macao", "Scarlet Macaw Costa Rica", "Scarlet Macaw Guanacaste", "Scarlet Macaw conservation", "Guanacaste dry forest", "birdwatching Guanacaste", "Costa Rica wildlife"]
 
   return {
-    metadataBase: new URL(siteUrl),
+    metadataBase: new URL(baseUrl),
     title: {
-      template: `%s | ${dictionary.metadata.title}`,
-      default: dictionary.metadata.title,
+      default: title,
+      template: `%s | Ara macao`
     },
-    description: dictionary.metadata.description,
-    keywords: [
-      "Lapa Roja", "Scarlet Macaw", "Guanacaste", "Bosque Seco", 
-      "Conservación", "Costa Rica", "Ara macao", "Dry Forest Conservation",
-      "Birdwatching Costa Rica"
-    ],
-    authors: [{ name: "Símbolo Cielos Guanacaste Project" }],
-    creator: "Educational Outreach",
-    publisher: "Símbolo Cielos Guanacaste",
+    description,
+    keywords,
+    applicationName: "Campaña Ara Macao",
+    authors: [{ name: "Proyecto Lapa Roja", url: baseUrl }],
+    generator: "Next.js",
+    publisher: "Proyecto Lapa Roja",
+    creator: "Proyecto Lapa Roja",
+    category: isEs ? "Conservación Ambiental" : "Environmental Conservation",
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
     alternates: {
-      canonical: `${siteUrl}/${lang}`,
+      canonical: `${baseUrl}/${lang}`,
       languages: {
-        'es': `${siteUrl}/es`,
-        'en': `${siteUrl}/en`,
+        "es": `${baseUrl}/es`,
+        "en": `${baseUrl}/en`,
+        "x-default": `${baseUrl}/es`,
       },
     },
     openGraph: {
-      title: dictionary.metadata.title,
-      description: dictionary.metadata.description,
-      url: `${siteUrl}/${lang}`,
-      siteName: dictionary.metadata.title,
+      title,
+      description,
+      url: `${baseUrl}/${lang}`,
+      siteName: isEs ? "Campaña Ara Macao" : "Ara Macao Campaign",
+      locale: isEs ? "es_CR" : "en_US",
+      type: "website",
       images: [
         {
-          url: "https://images.unsplash.com/photo-1549471013-3364d7220b7a?auto=format&fit=crop&w=1200&h=630&q=80",
+          url: "/og-image.jpg", // To be created
           width: 1200,
           height: 630,
-          alt: "Lapa Roja volando en Costa Rica",
-        },
+          alt: isEs ? "Lapa Roja volando en el bosque seco de Guanacaste" : "Scarlet Macaw flying in the Guanacaste dry forest",
+        }
       ],
-      locale: lang === 'es' ? 'es_CR' : 'en_US',
-      type: 'website',
     },
     twitter: {
-      card: 'summary_large_image',
-      title: dictionary.metadata.title,
-      description: dictionary.metadata.description,
-      images: ["https://images.unsplash.com/photo-1549471013-3364d7220b7a?auto=format&fit=crop&w=1200&h=630&q=80"],
+      card: "summary_large_image",
+      title,
+      description,
+      creator: "@ProyectoLapaRoja",
+      images: ["/og-image.jpg"],
+    },
+    icons: {
+      icon: [
+        { url: "/favicon.ico" },
+        { url: "/icon.png", type: "image/png" }
+      ],
+      apple: [
+        { url: "/apple-icon.png", type: "image/png", sizes: "180x180" }
+      ]
     },
     robots: {
       index: true,
@@ -70,39 +87,36 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       googleBot: {
         index: true,
         follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
       },
     },
-  };
+  }
 }
 
-export default async function RootLayout({
+export default async function LangLayout({
   children,
   params,
-}: Readonly<{
-  children: React.ReactNode;
-  params: Promise<{ lang: string }>;
-}>) {
-  const { lang } = await params;
-
+}: {
+  children: React.ReactNode
+  params: Promise<{ lang: "es" | "en" }>
+}) {
+  const { lang } = await params
   return (
-    <html
-      lang={lang}
-      className={`${inter.variable} ${playfair.variable} h-full antialiased`}
-      suppressHydrationWarning
-    >
-      <body className="min-h-full flex flex-col selection:bg-primary/20 selection:text-primary">
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          {children}
-        </ThemeProvider>
+    <html lang={lang} suppressHydrationWarning>
+      <head>
+        <meta name="theme-color" content="#b91c1c" media="(prefers-color-scheme: light)" />
+        <meta name="theme-color" content="#7f1d1d" media="(prefers-color-scheme: dark)" />
+        <JsonLd lang={lang} />
+      </head>
+      <body className="antialiased min-h-screen bg-background text-foreground flex flex-col">
+        {/* Header and Footer are rendered inside page.tsx in the current architecture or globally here. 
+            NOTE: Header was in both layout and page. I'm leaving it here as the global shell. */}
+        <Header />
+        <main className="flex-1 flex flex-col">{children}</main>
+        {/* Footer could be here, but leaving it as in the original to not break the design. */}
       </body>
     </html>
-  );
+  )
 }
