@@ -47,6 +47,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       address: false,
       telephone: false,
     },
+    verification: {
+      // Usa esta variable en Vercel cuando vincules el dominio en Google Search Console
+      google: process.env.NEXT_PUBLIC_GOOGLE_VERIFICATION,
+    },
     alternates: {
       canonical: `${baseUrl}/${lang}`,
       languages: {
@@ -64,10 +68,10 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       type: "website",
       images: [
         {
-          url: "/og-image.jpg", // To be created
-          width: 1200,
-          height: 630,
-          alt: isEs ? "Lapa Roja volando en el bosque seco de Guanacaste" : "Scarlet Macaw flying in the Guanacaste dry forest",
+          url: "https://i.ibb.co/9MfHMZL/image.png",
+          width: 800, // Ajustado a dimensiones estándar de redes sociales para logos cuadrados/circulares
+          height: 800,
+          alt: isEs ? "Logo oficial Lapa Roja - Símbolo de los cielos de Guanacaste" : "Official Scarlet Macaw Logo - Symbol of Guanacaste",
         }
       ],
     },
@@ -76,15 +80,14 @@ export async function generateMetadata({ params }: { params: Promise<{ lang: str
       title,
       description,
       creator: "@ProyectoLapaRoja",
-      images: ["/og-image.jpg"],
+      images: ["https://i.ibb.co/9MfHMZL/image.png"],
     },
     icons: {
       icon: [
-        { url: "/favicon.ico" },
-        { url: "/icon.png", type: "image/png" }
+        { url: "https://i.ibb.co/9MfHMZL/image.png", type: "image/png" }
       ],
       apple: [
-        { url: "/apple-icon.png", type: "image/png", sizes: "180x180" }
+        { url: "https://i.ibb.co/9MfHMZL/image.png", type: "image/png", sizes: "180x180" }
       ]
     },
     robots: {
